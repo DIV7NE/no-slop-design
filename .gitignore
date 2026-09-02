@@ -1,0 +1,4 @@
+skills/no-slop-design/cache/*
+!skills/no-slop-design/cache/.gitkeep
+.claude/
+node_modules/
