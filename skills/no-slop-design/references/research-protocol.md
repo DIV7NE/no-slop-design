@@ -91,7 +91,7 @@ The queries above are web-first. Adjust the sources, not the process — per-pla
 
 ## Track D — inspiration galleries (the ceiling)
 
-Competitors set the floor: what a customer will compare against. Track D sets the ceiling: the best work in the category and platform, from curated galleries. One research subagent, token-capped: ≤ 3 galleries, ≤ 6 headless captures, ≤ 400 words back. Pick the galleries by kind and platform — never all of them:
+Competitors set the floor: what a customer will compare against. Track D sets the ceiling: the best work in the category and platform, from curated galleries. One research subagent, token-capped: ≤ 3 galleries read, ≤ 5 headless captures (of exemplar sites, not galleries), ≤ 400 words back. Pick the galleries by kind and platform — never all of them:
 
 | Kind / platform | Pick 2–3 of |
 |---|---|
@@ -105,7 +105,7 @@ Competitors set the floor: what a customer will compare against. Track D sets th
 | Any category, fast visual census | Google Images: `<category> website design` / `<category> app UI` — one results page, to see what the category looks like at a glance and which looks are already everywhere |
 | Templates as evidence | ThemeForest / Envato, Framer and Webflow template galleries — searched for the category to learn the template conventions buyers expect and the exact looks to avoid; a template is never a reference, it is the floor of the floor |
 
-Procedure: capture each chosen gallery's tag, search, or category page once with `scripts/capture.mjs --tall --jpeg` (one image per gallery); from those, open at most two individual examples, captured `--desktop` only; also run `WebFetch` on the gallery page to read the example names and URLs, because a screenshot cannot be clicked. The full toools.design list (https://www.toools.design/ui-web-design-inspiration-websites) is the fallback when none of the above fits the platform.
+Procedure — read galleries, capture exemplars: several galleries (One Page Love, Land-book, Lapa Ninja, Google Images) serve a bot wall to headless Chrome, so never spend captures on gallery pages. For each chosen gallery run `WebFetch` on its tag, search, or category page and ask for the example names, URLs, and one line on each (this costs no capture and gets through where a screenshot does not). Pick the 3–4 most relevant examples across galleries, then capture the example sites themselves with `scripts/capture.mjs --desktop --jpeg` (they are ordinary sites and load fine); `--tall` on at most one of them. If a gallery's fetch also fails, move to the next gallery on the list rather than retrying. For the visual census, use `WebSearch` with the category query and read the result titles and descriptions; do not try to capture Google Images. The full toools.design list (https://www.toools.design/ui-web-design-inspiration-websites) is the fallback when none of the above fits the platform.
 
 Return: 3 named exemplars with URLs, each with ONE specific takeaway (a layout decision, a type treatment, how imagery is placed, how motion is used, how the product is shown), what the category's best work has in common, and what it never does. Never "looks clean". Exemplar captures go to `.claude/refs/` and into the BAR as reference exemplars, each tagged with the aspect it is a reference for; the critic's A/B uses them alongside the competitors. Warning: galleries reward novelty; an exemplar informs a facet of a direction, never the direction itself, and a look that appears on every gallery this year is a tell, not a target.
 
