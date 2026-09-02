@@ -11,7 +11,7 @@ Process skill. It runs BEFORE any design implementation skill (impeccable, desig
 
 1. State the **tier** (Scale table) from facts about the change.
 2. **Gate 1** — open `references/interview.md`. Ask only what the conversation has not answered, one `AskUserQuestion` round at a time, using the exact wording there. Record platform(s), kind, register, constraints, budget, content inventory. Unlisted platform or kind → discovery in `references/platforms.md`.
-3. **Gate 2** — open `references/research-protocol.md`. Reuse ledger/cache if under 30 days; else research subagents (Tracks A, B, C) and the subject-material list. Write the six-section ledger.
+3. **Gate 2** — open `references/research-protocol.md`. Reuse ledger/cache if under 30 days; else research subagents (Tracks A, B, C, D) and the subject-material list. Write the six-section ledger.
 4. **Gate 2b** — ask type, stack, theme, colour (measured), images, drawn elements, video; recommendation first (wording in interview.md).
 5. **Gate 3** — open `references/preview.md`. Product register: flow map and IA first. Full/Evolve: three directions from the subject's world, user picks. Then the full preview with the life budget filled in; get approval.
 6. **Gate 4** — open `references/gauntlet.md`. Bar, units, headless capture, audit, a11y, fresh critic per round, loop within budget, smooth pass, `DESIGN.md`, report.
@@ -65,6 +65,7 @@ Reuse first: a project ledger under 30 days old, and the cross-project cache und
 - **Track A** — what AI slop looked like and looks like now: visual, layout, motion, copy, by era and for this category and platform. Confirmed new patterns are appended to `references/slop-catalog.md` with dates.
 - **Track B** — by-the-book for this exact context: platform guidelines, WCAG 2.2, motion tokens with numbers, typography, theme evidence, colour meaning, 3–4 type pairings that differ in voice, and **3–5 real competitors in the same category and locale, captured headlessly** — never optional, never "none curated".
 - **Track C** — the platform's stack layers with versions from the registry, cost, and the from-scratch alternative.
+- **Track D** — the ceiling: 2–3 curated galleries chosen by kind and platform (One Page Love, Siteinspire, Land-book, Mobbin, SaaSFrame, Awwwards, Google Images for a visual census, template markets to learn what to avoid — the list is in the protocol), token-capped at 6 captures and 400 words; returns 3 named exemplars with one specific takeaway each, tagged by aspect, into the BAR.
 - **Subject material** — before any direction is chosen, list the product's own assets and world: its art, screens, motifs, genre conventions, voice. Direction is derived from this list, not from the catalog of what is safe.
 
 Ledger (`.claude/no-slop-design-ledger.md`, `updated:` line, six sections): BANNED · ALLOWED WITH SOURCE · **ALLOWED BY IDENTITY** (catalog patterns that belong to this subject's world, with what makes the execution specific) · CONTEXT NOTES (incl. BAR and measured contrast) · STACK OPTIONS · GREP TARGETS. A pattern in BANNED is used only after moving to one of the ALLOWED sections with its justification written down.

@@ -12,7 +12,7 @@ Write the list that the direction will be derived from: the product's own art an
 
 ## Tracks
 
-Three tracks, run in parallel, each as its own subagent with `WebSearch` and `WebFetch` (and `last30days` when installed, for what designers are complaining about this month). Each track returns findings with URLs. Findings without a URL are guesses and are labeled as such in the ledger.
+Four tracks, run in parallel, each as its own subagent with `WebSearch` and `WebFetch` (and `last30days` when installed, for what designers are complaining about this month). Each track returns findings with URLs. Findings without a URL are guesses and are labeled as such in the ledger.
 
 Time-box: 10–15 minutes of agent work per track. Depth matters less than currency: a 2026 thread saying "every generated app now looks like X" outranks a 2023 article.
 
@@ -88,6 +88,28 @@ Version, bundle size, and maintenance facts come from the package itself: the np
 ## Non-web contexts
 
 The queries above are web-first. Adjust the sources, not the process — per-platform guidelines, stack layers, type and motion defaults, competitor sources, capture routes, and slop clusters are in [platforms.md](platforms.md). For apps, the competitors are the App Store / Google Play listing pages: capture with `scripts/capture.mjs --tall` and crop the screenshot carousels; Track A adds `AI generated <platform> app look` and the app-UI section of the slop catalog. Motion graphics, video, and print take motion-design or typographic fundamentals as Track B and the generator-default tells as Track A.
+
+## Track D — inspiration galleries (the ceiling)
+
+Competitors set the floor: what a customer will compare against. Track D sets the ceiling: the best work in the category and platform, from curated galleries. One research subagent, token-capped: ≤ 3 galleries, ≤ 6 headless captures, ≤ 400 words back. Pick the galleries by kind and platform — never all of them:
+
+| Kind / platform | Pick 2–3 of |
+|---|---|
+| Landing page, one-pager, marketing site | One Page Love (onepagelove.com, tag or search page), Land-book (land-book.com), Lapa Ninja (lapa.ninja), Siteinspire (siteinspire.com), Godly (godly.website), Awwwards (awwwards.com) for ambition and motion, Dark Mode Design (darkmodedesign.com) when the theme is dark, Siiimple (siiimple.com) for restraint done well |
+| Web app, SaaS, dashboard | SaaSFrame (saasframe.io), Mobbin web (mobbin.com), Pageflows (pageflows.com) for real flows, Unsection (unsection.com) for section patterns, Details.so for micro-details |
+| Mobile app | Mobbin (mobbin.com), Pttrns (pttrns.com), Pageflows |
+| E-commerce | Commerce Cream (commercecream.com), ecomm.design |
+| Email | Really Good Emails (reallygoodemails.com) |
+| Brand, mark, identity | Branition (branition.com), LogoLounge, Behance (behance.net) |
+| Motion-heavy | Awwwards, The FWA (thefwa.com), Dribbble animation, Behance Motion |
+| Any category, fast visual census | Google Images: `<category> website design` / `<category> app UI` — one results page, to see what the category looks like at a glance and which looks are already everywhere |
+| Templates as evidence | ThemeForest / Envato, Framer and Webflow template galleries — searched for the category to learn the template conventions buyers expect and the exact looks to avoid; a template is never a reference, it is the floor of the floor |
+
+Procedure: capture each chosen gallery's tag, search, or category page once with `scripts/capture.mjs --tall --jpeg` (one image per gallery); from those, open at most two individual examples, captured `--desktop` only; also run `WebFetch` on the gallery page to read the example names and URLs, because a screenshot cannot be clicked. The full toools.design list (https://www.toools.design/ui-web-design-inspiration-websites) is the fallback when none of the above fits the platform.
+
+Return: 3 named exemplars with URLs, each with ONE specific takeaway (a layout decision, a type treatment, how imagery is placed, how motion is used, how the product is shown), what the category's best work has in common, and what it never does. Never "looks clean". Exemplar captures go to `.claude/refs/` and into the BAR as reference exemplars, each tagged with the aspect it is a reference for; the critic's A/B uses them alongside the competitors. Warning: galleries reward novelty; an exemplar informs a facet of a direction, never the direction itself, and a look that appears on every gallery this year is a tell, not a target.
+
+Cache Track D per category and platform with the rest.
 
 ## Writing the ledger
 

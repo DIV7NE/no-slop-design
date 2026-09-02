@@ -11,7 +11,7 @@ Adapted from Matt Shumer's Gauntlet Loop (see sources at the bottom). Three rule
 Set before the first build, written into the ledger under CONTEXT NOTES as `## BAR`:
 
 - **Competitors:** captures of the 3–5 real sites, apps, or store listings in the same category and locale from Track B (`.claude/refs/<name>-tall.jpg` for the full page, `-desktop` and `-mobile` for viewports, as `capture.mjs` names them). Ugly or dated ones stay in — the customer compares against them, so the critic does too.
-- **Reference exemplars:** 2–3 further screenshots of products that represent the level to reach, each tagged with the aspect it is a reference for (type, density, motion, copy voice), when Track B found them.
+- **Reference exemplars:** the 3 gallery exemplars from Track D (and any Track B found), each tagged with the aspect it is a reference for (type, density, motion, copy voice, imagery placement). The critic's A/B must be at least even on each exemplar's aspect; exemplars never replace competitors.
 - **The approved Gate 3 preview** and its filled-in **life budget**.
 - **The ledger's BANNED and ALLOWED WITH SOURCE sections:** the rules.
 - **The one job of each unit.**
